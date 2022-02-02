@@ -3,10 +3,9 @@ using System.Linq;
 
 namespace DecisionTree
 {
-    class Program
+    internal class Program
     {
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ID3Tree decisionTree = new();
 

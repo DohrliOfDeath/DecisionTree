@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DecisionTree
 {
-    class ID3Tree
+    internal class ID3Tree
     {
         /// <summary>
         /// building a new tree, this method is called recursively and adding nodes to it's root node
@@ -45,7 +45,7 @@ namespace DecisionTree
             foreach (var line in maxColumn.GroupBy(info => info.ToString()))
             {
                 // start recursively again
-                next.Children.Add(NodeTrain<T>(CutDataEnum(dat, maxIndex, line.Key.ToString()), line.Key.ToString()));
+                next.Children.Add(NodeTrain<T>(CutDataEnum(dat, maxIndex, line.Key), line.Key));
             }
             return next;
         }

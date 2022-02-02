@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DecisionTree
 {
-    static class Data
+    internal static class Data
     {
         /// <summary>
         /// These is the training data as enum jagged-Array
@@ -29,7 +29,8 @@ namespace DecisionTree
         };
         public static int labelPosition = 4;
         public static int distinctLabel;
-        static void funcs()
+
+        private static void funcs()
         {
             // How to read enum values dynamically in Runtime
             // Enum values as String
